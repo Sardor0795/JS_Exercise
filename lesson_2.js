@@ -1,5 +1,6 @@
 // Task 1 --------------------------------------------------------
 
+
 // let a = 1, b = 1;
 
 // let c = ++a // c == 2 (c ning qiymati 2 ga teng bo'ladi -> sababi ++a birinchi qiymatini 1 ga oshiradi va uni c ga beradi)
@@ -45,4 +46,3 @@ null + 1         // natija 1 (number) chiqadi sababi null 0 ga teng
 undefined + 1    // natija NaN chiqadi sababi undefined xech qanday raqamga teng emas va u raqamlarga umuman aloqasi yo'q (undefined faqat == bilan null ga taqqoslaganda teng va boshqa xech narsaga teng emas)
 
 " \t \n " - 2    // natija -2 (number) chiqadi sababi (-) tab va new line dagi barcha bo'sh joylarni kesip tashaydi va 2 number tipida - ga o'tib faqat o'zi qoladi
-
