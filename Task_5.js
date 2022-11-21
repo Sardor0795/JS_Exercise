@@ -34,3 +34,16 @@
 // };
 
 // console.log(pow(2, 6));
+
+// Ex 5
+
+// const ask = (question, yes, no) => {
+//   if (confirm(question)) yes();
+//   else no();
+// };
+
+// ask(
+//   "Do you agree?",
+//   () => alert("You agreed."),
+//   () => alert("You cancelled the execution.")
+// );
