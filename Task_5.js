@@ -47,3 +47,14 @@
 //   () => alert("You agreed."),
 //   () => alert("You cancelled the execution.")
 // );
+
+// Ex Num to Binary
+
+// function bin(num) {
+//   return num.toString(2);
+// }
+
+// console.log(bin(24));
+// console.log(bin(22));
+// console.log(bin(13));
+// console.log(bin(7));
