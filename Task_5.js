@@ -18,3 +18,19 @@
 // };
 
 // console.log(checkAge(19));
+
+// Ex 3 ---
+
+// const min = (a, b) => {
+//   return a > b ? a : b;
+// };
+
+// console.log(min(40,30));
+
+// Ex 4 ---
+
+// const pow = (x, n) => {
+//   return x ** n;
+// };
+
+// console.log(pow(2, 6));
