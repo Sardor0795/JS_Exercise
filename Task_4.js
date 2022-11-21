@@ -68,3 +68,18 @@
 //     console.log(`${i} * ${j} = ${i * j}`);
 //   }
 // }
+
+// Extra
+
+//  N va K o'zgaruvchilar berilgan. K sonni N marta chiqarish lozim
+
+//   let n = 10
+//   let k = 5
+
+//   if (n > 0 && k > 0) {
+//       for (let i = 1; i <= n; i++) {
+//           console.log(k);
+//       }
+//   } else {
+//       alert('Faqat son kiriting !!!')
+//   }
