@@ -61,3 +61,110 @@
 // multiplyNumeric(menu);
 
 // console.log(menu);
+
+// Extra Exercises ---
+
+// No 1 ---
+
+// let obj = {
+//   id: 1,
+//   name: "WebBrain",
+// };
+
+// for (let i in obj) {
+//   console.log(i);
+// }
+
+// No 2 ---
+
+// let obj = {
+//   id: 1,
+//   name: "WebBrain",
+//   number: +998995002020,
+// };
+
+// for (let i in obj) {
+//   if (typeof obj[i] == "number") {
+//     console.log(i);
+//   }
+// }
+
+// No 3 ---
+
+// let obj = {
+//   id: 1,
+//   name: "WebBrain",
+//   number: +998995002020,
+//   offline: true,
+//   online: true,
+//   individual: false,
+// };
+
+// let booleanOnly = {};
+
+// for (let i in obj) {
+//   if (typeof obj[i] == "boolean") {
+//     booleanOnly[i] = obj[i];
+//   }
+// }
+
+// console.log(booleanOnly);
+
+// No 4 ---
+
+// let obj = {
+//   id: 1,
+//   name: "WebBrain",
+//   number: +998995002020,
+//   offline: true,
+//   online: true,
+//   individual: false,
+// };
+
+// const Search = (obj, str) => {
+//   for (let i in obj) {
+//     if (obj[i] == str) {
+//       console.log(`${i}:"${obj[i]}"`);
+//     }
+//   }
+// };
+
+// Search(obj, "WebBrain");
+
+// No 5 ---
+
+// let obj = {
+//   id: 1,
+//   name: "atirgul",
+//   color: "qizil",
+//   count: 10,
+//   price: "10$",
+// };
+
+// let searchValue = (obj) => {
+//   for (let key in obj) {
+//     if (typeof obj[key] === "string") {
+//       console.log(obj[key]);
+//     }
+//   }
+// };
+
+// searchValue(obj);
+
+// No 6 ---
+
+// let person = {
+//   id: 1,
+//   name: "Odil",
+//   age: 78,
+//   child: {
+//     id: 1,
+//     name: "Ali",
+//     age: 48,
+//     child: {
+//       id: 1,
+//       name: "Umar",
+//       age: 20,
+//     },
+//   },
+// };
