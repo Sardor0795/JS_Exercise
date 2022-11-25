@@ -168,3 +168,12 @@
 //     },
 //   },
 // };
+
+// let sum = 0;
+
+// while (person) {
+//   sum += person.age;
+//   person = person.child;
+// }
+
+// console.log(sum);
