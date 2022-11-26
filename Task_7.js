@@ -32,3 +32,23 @@
 // calculator.read(10, 20);
 
 // console.log(calculator.mul());
+
+// Ex 3 ---
+
+// let ladder = {
+//   step: 0,
+//   up() {
+//     this.step++;
+//     return this;
+//   },
+//   down() {
+//     this.step--;
+//     return this;
+//   },
+//   showStep() {
+//     console.log(this.step);
+//     return this;
+//   },
+// };
+
+// ladder.up().up().down().showStep().down().showStep();
