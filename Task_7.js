@@ -11,8 +11,9 @@
 
 // console.log(user.ref.name);
 
-// Natija undefined chiqadi sababi shu obekt ichida this bo'sh obekt ochadi va ref ga birlashtiradi ref : {}, obekt ichida yoq key
-// chaqirilsa uni bor qilip koradi va uni qiymati yoq bo'gani uchun undefined chiqadi ref : {} <-- name: undefined
+// natija undefined chiqadi sababi bu erda this qiymati undefined, u faqat funktsya qachonki obekt ichidagi metod qilib chqirilganda
+// shu . chap tomonidagi obektga teng bo'ladi boshqa payt qiymati bo'lmaydi, bu erda esa u metod sfatida chaqirilmayapti, va obekt
+// ichida turgan bo'lsaxam u obektga teng emas
 
 // Ex 2 ---
 
