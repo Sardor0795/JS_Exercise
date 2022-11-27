@@ -11,7 +11,7 @@
 
 // console.log(user.ref.name);
 
-// natija undefined chiqadi sababi bu erda this qiymati undefined, u faqat funktsya qachonki obekt ichidagi metod qilib chqirilganda
+// natija // Error: Cannot read property 'name' of undefined chiqadi sababi bu erda this qiymati undefined, u faqat funktsya qachonki obekt ichidagi metod qilib chqirilganda
 // shu . chap tomonidagi obektga teng bo'ladi boshqa payt qiymati bo'lmaydi, bu erda esa u metod sfatida chaqirilmayapti, va obekt
 // ichida turgan bo'lsaxam u obektga teng emas
 
