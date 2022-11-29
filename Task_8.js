@@ -164,3 +164,26 @@
 // };
 
 // getCurrency("$$$$1dff2$$0g0$$");
+
+// Ex 6 --- Capitalize without Arr, Replace, RegX
+
+let capitalizeStr = (str) => {
+  str = str.toLowerCase();
+
+  let capStr = "";
+
+  capStr = str[0].toUpperCase();
+
+  for (let i = 1; i < str.length; i++) {
+    if (str[i] == " ") {
+      capStr += ` ${str[i + 1].toUpperCase()}`;
+      i++;
+    } else {
+      capStr += str[i];
+    }
+  }
+
+  return capStr;
+};
+
+console.log(capitalizeStr("saRDoR WEB bRaIn aCaDeMy"));
