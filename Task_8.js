@@ -78,3 +78,28 @@
 // Math.ceil()  ->  faqat tepaga qarab yaxlitlash
 // Math.trunc() ->  faqat butun qismini olish
 // parseInt()   ->  faqat butun qismini olish
+
+// Ex 4 ---
+
+// let randomInteger = (min, max) => {
+//   let numbers = {};
+
+//   let counter = min;
+
+//   while (true) {
+//     let num = parseInt(Math.random() * max);
+//     if (num > min) {
+//       numbers[counter] = num;
+//       counter += 1;
+//     }
+//     if (counter == max + 1) {
+//       break;
+//     }
+//   }
+
+//   for (let i in numbers) {
+//     console.log(i, ": " + numbers[i]);
+//   }
+// };
+
+// randomInteger(25, 46);
