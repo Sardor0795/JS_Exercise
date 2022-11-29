@@ -148,3 +148,19 @@
 // };
 
 // console.log(truncate("webbrain", 5));
+
+// Ex 4 ---
+
+// let getCurrency = (str) => {
+//   let num = "";
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] >= 0) {
+//       num += `${str[i]}`;
+//     }
+//   }
+
+//   console.log(num);
+// };
+
+// getCurrency("$$$$1dff2$$0g0$$");
