@@ -91,7 +91,7 @@
 //   let counter = min;
 
 //   while (true) {
-//     let num = parseInt(Math.random() * max);
+//     let num = parseInt(Math.random() * (max + 1));
 //     if (num > min) {
 //       numbers[counter] = num;
 //       counter += 1;
@@ -167,23 +167,23 @@
 
 // Ex 6 --- Capitalize without Arr, Replace, RegX
 
-let capitalizeStr = (str) => {
-  str = str.toLowerCase();
+// let capitalizeStr = (str) => {
+//   str = str.toLowerCase();
 
-  let capStr = "";
+//   let capStr = "";
 
-  capStr = str[0].toUpperCase();
+//   capStr = str[0].toUpperCase();
 
-  for (let i = 1; i < str.length; i++) {
-    if (str[i] == " ") {
-      capStr += ` ${str[i + 1].toUpperCase()}`;
-      i++;
-    } else {
-      capStr += str[i];
-    }
-  }
+//   for (let i = 1; i < str.length; i++) {
+//     if (str[i] == " ") {
+//       capStr += ` ${str[i + 1].toUpperCase()}`;
+//       i++;
+//     } else {
+//       capStr += str[i];
+//     }
+//   }
 
-  return capStr;
-};
+//   return capStr;
+// };
 
-console.log(capitalizeStr("saRDoR WEB bRaIn aCaDeMy"));
+// console.log(capitalizeStr("saRDoR WEB bRaIn aCaDeMy"));
