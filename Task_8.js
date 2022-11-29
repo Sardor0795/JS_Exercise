@@ -79,6 +79,8 @@
 // Math.trunc() ->  faqat butun qismini olish
 // parseInt()   ->  faqat butun qismini olish
 
+//  --- round, floor, trunc slower than others ---
+
 // Ex 4 ---
 
 // let randomInteger = (min, max) => {
