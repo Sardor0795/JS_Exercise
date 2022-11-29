@@ -14,3 +14,34 @@
 // console.log(binary);
 // console.log(sum_1);
 // console.log(sum_2);
+
+// Ex 2 --- Max - Min
+
+// let minMax = (num) => {
+//   let objNum = {};
+
+//   for (let i = 1; i <= num; i++) {
+//     objNum[i] = parseInt(Math.random() * 100);
+//   }
+
+//   let min = 2 ** 53 - 1;
+//   let max = 0;
+//   for (let i in objNum) {
+//     if (objNum[i] > 0 && objNum[i] < min) {
+//       min = objNum[i];
+//     }
+//   }
+
+//   for (let i in objNum) {
+//     if (objNum[i] > 0 && objNum[i] > max) {
+//       max = objNum[i];
+//     }
+//   }
+
+//   console.log(objNum);
+//   console.log("Min: " + min);
+//   console.log("Max: " + max);
+//   console.log("Result: " + (max - min));
+// };
+
+// minMax(10);
