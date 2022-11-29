@@ -160,7 +160,7 @@
 //     }
 //   }
 
-//   console.log(num);
+//   console.log(+num);
 // };
 
 // getCurrency("$$$$1dff2$$0g0$$");
