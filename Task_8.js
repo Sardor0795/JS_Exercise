@@ -26,6 +26,7 @@
 
 //   let min = 2 ** 53 - 1;
 //   let max = 0;
+
 //   for (let i in objNum) {
 //     if (objNum[i] > 0 && objNum[i] < min) {
 //       min = objNum[i];
@@ -37,6 +38,30 @@
 //       max = objNum[i];
 //     }
 //   }
+
+//   console.log(objNum);
+//   console.log("Min: " + min);
+//   console.log("Max: " + max);
+//   console.log("Result: " + (max - min));
+// };
+
+// minMax(10);
+
+// ---- With Array ----
+
+// let minMax = (num) => {
+//   let objNum = [];
+
+//   for (let i = 1; i <= num; i++) {
+//     objNum.push(parseInt(Math.random() * 100));
+//   }
+
+//   let min = 2 ** 53 - 1;
+//   let max = 0;
+
+//   min = Math.min(...objNum);
+
+//   max = Math.max(...objNum);
 
 //   console.log(objNum);
 //   console.log("Min: " + min);
