@@ -70,3 +70,11 @@
 // };
 
 // minMax(10);
+
+// Ex 3 ---
+
+// Math.round() ->  matematik yaxlitlash 0...4 > 5...9
+// Math.floor() ->  faqat pastga qarab yaxlitlash
+// Math.ceil()  ->  faqat tepaga qarab yaxlitlash
+// Math.trunc() ->  faqat butun qismini olish
+// parseInt()   ->  faqat butun qismini olish
