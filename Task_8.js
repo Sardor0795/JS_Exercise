@@ -110,6 +110,20 @@
 
 // String ---
 
+// Ex 1 ---
+
+// let check = (str1, str2) => {
+//   if (str1 === str2) {
+//     console.log("Bir biriga mos");
+//   } else if (str1.includes(str2)) {
+//     console.log("Qisman to'g'ri");
+//   } else {
+//     console.log("Togri kelmaydi");
+//   }
+// };
+
+// check("Sardor", "ffghfdghf");
+
 // Ex 2 ---
 
 // let getCount = (str) => {
