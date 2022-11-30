@@ -179,6 +179,32 @@
 
 // getCurrency("$$$$1dff2$$0g0$$");
 
+// Ex 5 ---
+
+// let checkStr = (str) => {
+//   let char = 0;
+//   let letter = 0;
+//   let num = 0;
+
+//   let alphabet = "abcdefghijklmnopkrstuvwxyz";
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (alphabet.includes(str[i].toLowerCase())) {
+//       letter += 1;
+//     } else if (!isNaN(str[i])) {
+//       num += 1;
+//     } else {
+//       char += 1;
+//     }
+//   }
+
+//   console.log("Char: " + char);
+//   console.log("Letter: " + letter);
+//   console.log("Num: " + num);
+// };
+
+// checkStr("ssSs234@@");
+
 // Ex 6 --- Capitalize without Arr, Replace, RegX
 
 // let capitalizeStr = (str) => {
