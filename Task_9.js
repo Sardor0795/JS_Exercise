@@ -63,3 +63,19 @@
 // } else {
 //   console.log(`|${arr1}| != |${arr2}| //teng emas`);
 // }
+
+// Ex 4 ---
+
+// let str = "-webkit-transition";
+
+// let arrStr = "";
+
+// for (let i = 0; i < str.length; i++) {
+//   if (str[i] == "-") {
+//     arrStr += str[i + 1].toUpperCase();
+//     i += 2;
+//   }
+//   arrStr += str[i];
+// }
+
+// console.log(arrStr);
