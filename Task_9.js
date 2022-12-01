@@ -79,3 +79,39 @@
 // }
 
 // console.log(arrStr);
+
+// Ex 5 ---
+
+// let users = [
+//   { id: 1, year: 1998, engine: 1, name: "Tico" },
+//   { id: 2, year: 2005, engine: 1.2, name: "Matiz" },
+//   { id: 3, year: 2010, engine: 1.6, name: "Gentra" },
+//   { id: 4, year: 2010, engine: 1.5, name: "Cobalt" },
+//   { id: 5, year: 2012, engine: 2, name: "Malibu" },
+//   { id: 6, year: 2000, engine: 1.2, name: "Damas" },
+//   { id: 7, year: 2018, engine: 2.4, name: "Tracker" },
+// ];
+
+// let before2000 = "";
+// let after2010 = "";
+
+// for (let i = 0; i < users.length; i++) {
+//   if (users[i].year < 2000) {
+//     before2000 += `${users[i].name} `;
+//     users[i]["status"] = "eski";
+//   }
+//   if (users[i].year >= 2000 && users[i].year <= 2010) {
+//     users[i]["status"] = "o'rta";
+//   }
+//   if (users[i].year > 2010 && users[i].year <= 2022) {
+//     users[i]["status"] = "yangi";
+//   }
+//   if (users[i].year > 2010) {
+//     after2010 += `${users[i].name} `;
+//   }
+// }
+
+// console.log(users);
+
+// console.log("Before 2000: " + before2000);
+// console.log("After 2010: " + after2010);
