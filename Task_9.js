@@ -44,3 +44,22 @@
 // }
 
 // console.log(filteredArr);
+
+// Ex 3 ---
+
+// let arr1 = ["a", "b", "c", "d"];
+// let arr2 = ["a", "b", "c", "d"];
+
+// let check = 0;
+
+// for (let i = 0; i < arr1.length; i++) {
+//   if (arr1[i] == arr2[i]) {
+//     check += 1;
+//   }
+// }
+
+// if (check == arr1.length) {
+//   console.log(`|${arr1}| == |${arr2}| //teng`);
+// } else {
+//   console.log(`|${arr1}| != |${arr2}| //teng emas`);
+// }
