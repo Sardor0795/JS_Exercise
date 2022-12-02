@@ -14,6 +14,11 @@
 
 // console.log(sumArr);
 
+// ----------------------------------------
+
+// console.log(arr);
+// console.log(eval(arr.join("+")));
+
 // Ex 2 ---
 
 // let arr = ["webbrain", "academy"];
