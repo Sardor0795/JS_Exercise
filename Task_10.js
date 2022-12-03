@@ -16,13 +16,10 @@
 
 // Instead of new Set() method -------
 
-// let num = [2, 3, 1, 1, 7, 8, 8, 6];
+// let num = [5, 6, 7, 8, 9, 5, 4, 4, 3, 6, 7];
 
-// let res = num.filter((value, index, array) => {
-//   console.log(
-//     `Value: ${value}  Index: ${index}  | ${array.indexOf(value)} === ${index} Res: ${array.indexOf(value) === index}`
-//   );
-//   return array.indexOf(value) === index;
+// let res = num.filter((v, i) => {
+//   return num.indexOf(v) === i;
 // });
 
 // console.log(res);
