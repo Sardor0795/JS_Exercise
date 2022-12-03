@@ -143,3 +143,25 @@
 // let res = 2022 - obj.year == obj.age ? "Yosh to'g'ri" : "Xato malumot kiritdingiz";
 
 // console.log(res);
+
+// No13
+
+// talaba oz malumotlarini toldirmoqda. sizga object va massiv berilgan. massiv ichida uzbekiston viloyatlari berilgan. agar talaba massiv ichidagi viloyatlardan boshqa tanlasa bizning filallarimiz faqat shu viloyatlarda degan natija chiqsin.
+
+// arr = ["Andijon", "Namangan", "Qarshi", "Toshkent"];
+
+// let student = {};
+
+// const getInfo = (name, age, province) => {
+//   if (arr.includes(province)) {
+//     student.name = name;
+//     student.age = age;
+//     student.province = province;
+
+//     console.log(student);
+//   } else {
+//     console.log(`Bizning filallarimiz faqat ${arr.join(", ")} viloyatlarda`);
+//   }
+// };
+
+// getInfo("Sardor", 27, "Qarshi");
