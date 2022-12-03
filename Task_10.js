@@ -165,3 +165,32 @@
 // };
 
 // getInfo("Sardor", 27, "Qarshi");
+
+// No14
+// talabalar malumotlari massiv berilgan. massiv objectlardan tashkil topgan. objectda login parol keltirilgan.
+// funksiyaga login va parol jonatiladi.
+// agar login parol togri bolsa 'hush kelibsiz' aks holda 'login yoki parol xato degan qiymat chiqazing'
+// logIn('Umar','2113') => xato
+// logIn('Salohiddin','3421') => hush kelibsiz
+
+let arr = [
+  { id: 3, name: "Usmon", parol: "1231" },
+  { id: 1, name: "Umar", parol: "1241" },
+  { id: 5, name: "Jasur", parol: "3452" },
+  { id: 2, name: "Asmo", parol: "2312" },
+  { id: 4, name: "Salohiddin", parol: "3421" },
+];
+
+const check = (login, password) => {
+
+  let user = arr.find((v) => v.name == login);
+
+  if(user) {
+    user.parol == password ? console.log("hush kelibsiz") : console.log("login yoki parol xato");
+  } else {
+    console.log("login yoki parol xato");
+  }
+
+};
+
+check("Usmon", "1231");
