@@ -215,3 +215,20 @@
 // let res = arr.includes(true) ? true : false;
 
 // console.log(res);
+
+// No16 ----
+
+let person = {
+  id: 1,
+  name: "Umar",
+  surname: "Ismoilov",
+};
+
+person.ielts = 7;
+
+console.log(person.ielts >= 5.5 ? "Qabul qilindi" : "Qayta topshirish kerak");
+
+person.ielts >= 5.5 ? person.student = true : person.student = false;
+
+person.student == true ? person.password = 200 - parseInt(Math.random() * 100) : null;
+console.log(person);
