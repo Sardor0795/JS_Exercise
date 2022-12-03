@@ -218,17 +218,40 @@
 
 // No16 ----
 
-let person = {
-  id: 1,
-  name: "Umar",
-  surname: "Ismoilov",
-};
+// let person = {
+//   id: 1,
+//   name: "Umar",
+//   surname: "Ismoilov",
+//   password : 125
+// };
 
-person.ielts = 7;
+// person.ielts = 7;
 
-console.log(person.ielts >= 5.5 ? "Qabul qilindi" : "Qayta topshirish kerak");
+// console.log(person.ielts >= 5.5 ? "Qabul qilindi" : "Qayta topshirish kerak");
 
-person.ielts >= 5.5 ? person.student = true : person.student = false;
+// person.ielts >= 5.5 ? person.student = true : person.student = false;
 
-person.student == true ? person.password = 200 - parseInt(Math.random() * 100) : null;
-console.log(person);
+// person.student == true ? person.password = 200 - parseInt(Math.random() * 100) : null;
+// console.log(person);
+
+// const check = (login, password) => {
+
+//   let user = null;
+
+//   for (let i in person) {
+//     if (person[i] == login) {
+//       user = person[i]
+//     }
+//   }
+
+//   console.log(user);
+
+//   if(user) {
+//     person.password == password ? console.log("hush kelibsiz" + user) : console.log("login yoki parol xato");
+//   } else {
+//     console.log("login yoki parol xato");
+//   }
+
+// };
+
+// check("Umar", person.password);
