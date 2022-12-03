@@ -129,3 +129,17 @@
 // obj.talaba ? (obj.kredit = true) : (obj.kredit = "Olinmadi");
 
 // console.log(obj);
+
+// No12
+// object ichida tugilgan yil,hozirgi yoshi malumotlari keltirilgan. agar yosh togri bolmasa 'xato malumot kiritdingiz' chiqarilsin
+
+// let obj = {
+//   id: 1,
+//   name: "Usmon",
+//   age: 34,
+//   year: 1990,
+// };
+
+// let res = 2022 - obj.year == obj.age ? "Yosh to'g'ri" : "Xato malumot kiritdingiz";
+
+// console.log(res);
