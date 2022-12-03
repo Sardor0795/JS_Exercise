@@ -114,3 +114,18 @@
 // let res = obj.practice >= 1 ? "Qabul qilindi" : "Ming bor uzur";
 
 // console.log(res);
+
+// No11 ----
+// agar object ichida talaba bolsa objectga {kiridit:true} key va value qoshilsin aks holsa {kiridit:olinmadi} qoshilsin
+
+// let obj = {
+//   id: 1,
+//   name: "Usmon",
+//   job: "developer",
+//   practice: 1,
+//   talaba: true,
+// };
+
+// obj.talaba ? (obj.kredit = true) : (obj.kredit = "Olinmadi");
+
+// console.log(obj);
