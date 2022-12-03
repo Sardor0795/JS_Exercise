@@ -70,3 +70,20 @@
 // let res = arr.filter((v) => v.job);
 
 // console.log(res);
+
+// No9 ----
+// objectdan clone oling birinchi objni o'zgartirsa ikkinchisi malumotlari ozgarmasligi kk
+
+// let obj = {
+//   id: 1,
+//   name: "Usmon",
+//   job: "developer",
+// };
+
+// let obj2 = structuredClone(obj);
+
+// obj2.id = 2;
+// obj2.name = "Jim";
+
+// console.log(obj);
+// console.log(obj2);
