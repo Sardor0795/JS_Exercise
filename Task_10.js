@@ -130,7 +130,7 @@
 
 // console.log(obj);
 
-// No12
+// No12 ----
 // object ichida tugilgan yil,hozirgi yoshi malumotlari keltirilgan. agar yosh togri bolmasa 'xato malumot kiritdingiz' chiqarilsin
 
 // let obj = {
@@ -144,7 +144,7 @@
 
 // console.log(res);
 
-// No13
+// No13 ----
 
 // talaba oz malumotlarini toldirmoqda. sizga object va massiv berilgan. massiv ichida uzbekiston viloyatlari berilgan. agar talaba massiv ichidagi viloyatlardan boshqa tanlasa bizning filallarimiz faqat shu viloyatlarda degan natija chiqsin.
 
@@ -166,31 +166,52 @@
 
 // getInfo("Sardor", 27, "Qarshi");
 
-// No14
+// No14 ----
 // talabalar malumotlari massiv berilgan. massiv objectlardan tashkil topgan. objectda login parol keltirilgan.
 // funksiyaga login va parol jonatiladi.
 // agar login parol togri bolsa 'hush kelibsiz' aks holda 'login yoki parol xato degan qiymat chiqazing'
 // logIn('Umar','2113') => xato
 // logIn('Salohiddin','3421') => hush kelibsiz
 
-let arr = [
-  { id: 3, name: "Usmon", parol: "1231" },
-  { id: 1, name: "Umar", parol: "1241" },
-  { id: 5, name: "Jasur", parol: "3452" },
-  { id: 2, name: "Asmo", parol: "2312" },
-  { id: 4, name: "Salohiddin", parol: "3421" },
-];
+// let arr = [
+//   { id: 3, name: "Usmon", parol: "1231" },
+//   { id: 1, name: "Umar", parol: "1241" },
+//   { id: 5, name: "Jasur", parol: "3452" },
+//   { id: 2, name: "Asmo", parol: "2312" },
+//   { id: 4, name: "Salohiddin", parol: "3421" },
+// ];
 
-const check = (login, password) => {
+// const check = (login, password) => {
 
-  let user = arr.find((v) => v.name == login);
+//   let user = arr.find((v) => v.name == login);
 
-  if(user) {
-    user.parol == password ? console.log("hush kelibsiz") : console.log("login yoki parol xato");
-  } else {
-    console.log("login yoki parol xato");
-  }
+//   if(user) {
+//     user.parol == password ? console.log("hush kelibsiz") : console.log("login yoki parol xato");
+//   } else {
+//     console.log("login yoki parol xato");
+//   }
 
-};
+// };
 
-check("Usmon", "1231");
+// check("Usmon", "1231");
+
+// No15 ----
+
+// object ichida objectlar berilgan. ichki objectlar bor yoqligini tekshiring chiqish true false;
+
+// obj = {
+//   id: 1,
+//   title: "the best",
+//   address: { street: "Farobiy", number: "34" },
+// };
+
+// let arr = [];
+
+// for (let i in obj) {
+//   if (typeof obj[i] == "object") arr.push(true);
+//   else arr.push(false);
+// }
+
+// let res = arr.includes(true) ? true : false;
+
+// console.log(res);
