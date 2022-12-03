@@ -88,7 +88,7 @@
 // console.log(obj);
 // console.log(obj2);
 
-// No10
+// No10 ----
 // objectga yangi qiymat qo'shuvchi funksiya yozing
 
 // let user = {};
@@ -100,3 +100,17 @@
 // };
 
 // add(user, "address", "toshkent");
+
+// No11 ----
+// agar object ichida practice 1 dan katta bolsa 'qabul qilindi'.aks holda 'ming bor uzur.'
+
+// let obj = {
+//   id: 1,
+//   name: "Usmon",
+//   job: "developer",
+//   practice: 1,
+// };
+
+// let res = obj.practice >= 1 ? "Qabul qilindi" : "Ming bor uzur";
+
+// console.log(res);
