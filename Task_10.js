@@ -87,3 +87,16 @@
 
 // console.log(obj);
 // console.log(obj2);
+
+// No10
+// objectga yangi qiymat qo'shuvchi funksiya yozing
+
+// let user = {};
+
+// const add = (obj, key, value) => {
+//   obj[key] = value;
+
+//   console.log(obj);
+// };
+
+// add(user, "address", "toshkent");
