@@ -26,3 +26,16 @@
 // });
 
 // console.log(res);
+
+// Instead of new Set() method ------
+
+// let num = [2, 3, 1, 1, 7, 8, 8, 6];
+
+// let res = num.filter((value, index, array) => {
+//   console.log(
+//     `Value: ${value}  Index: ${index + 1}  | ${array.indexOf(value, index +1)} === ${-1} Res: ${array.indexOf(value, index +1) === -1}`
+//   );
+//   return array.indexOf(value, index +1) === -1;
+// });
+
+// console.log(res);
