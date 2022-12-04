@@ -255,3 +255,60 @@
 // };
 
 // check("Umar", person.password);
+
+// Extra Task <----------
+
+let getCount = (str) => {
+  let alphabet = {
+      a: 0,b: 0,c: 0,d: 0,e: 0,f: 0,g: 0,h: 0,i: 0,j: 0,k: 0,l: 0,m: 0,
+      n: 0,o: 0,p: 0,k: 0,r: 0,s: 0,t: 0,u: 0,v: 0,w: 0,x: 0,y: 0,z: 0,
+  };
+
+  str = str.toLowerCase();
+
+  for (let i = 0; i < str.length; i++) {
+    for (let k in alphabet) {
+      if (k == str[i]) {
+        alphabet[k] += 1;
+      }
+    }
+  }
+
+  let filteredArr = {};
+
+  for (let n in alphabet) {
+    if (alphabet[n] > 0) {
+      filteredArr[n] = alphabet[n];
+    }
+  }
+
+  return filteredArr;
+};
+
+let str1 = "webbrain";
+let str2 = "brainweb";
+
+let str1counted = getCount(str1);
+let str2counted = getCount(str2);
+
+console.log(str1counted);
+console.log(str2counted);
+
+let res = null;
+
+outer: for (let i in str1counted) {
+  for (let l in str2counted) {
+    if (i in str2counted) {
+      if (str1counted[i] == str2counted[l]) {
+        res = true;
+      } else {
+        res = false;
+      }
+    } else {
+      res = false;
+      break outer;
+    }
+  }
+}
+
+console.log(res);
