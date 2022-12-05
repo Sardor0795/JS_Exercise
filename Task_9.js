@@ -21,6 +21,8 @@
 
 // Ex 2 ---
 
+// Long way --
+
 // let arr = ["webbrain", "academy"];
 
 // let str = arr.join("");
@@ -49,6 +51,20 @@
 // }
 
 // console.log(filteredArr);
+
+// short way --
+
+// let arr = ["webbrain", "academy"];
+
+// let str = arr.join("").toLowerCase();
+// let res = {};
+
+// for (let i of str) {
+//   if (res[i]) ++res[i];
+//   else res[i] = 1;
+// }
+
+// console.log(res);
 
 // Ex 3 ---
 
