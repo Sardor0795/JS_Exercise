@@ -316,6 +316,6 @@
 
 // Optimal way ---
 
-// const checkStr = (str1, str2) => str1.length === str2.length ? str1.toLowerCase().split('').sort((a, b) => a.localeCompare(b)).join('') === str2.toLowerCase().split('').sort((a, b) => a.localeCompare(b)).join('') : false
+const checkStr = (str1, str2) => str1.length === str2.length ? str1.toLowerCase().split('').sort().join('') === str2.toLowerCase().split('').sort().join('') : false
 
-// console.log(checkStr('web', 'bew'));
+console.log(checkStr('web', 'bew'));
