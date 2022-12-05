@@ -258,6 +258,8 @@
 
 // Extra Task <----------
 
+// Long way -----
+
 // const checkStr = (str1, str2) => {
 //   let getCount = (str) => {
 //       let alphabet = {
@@ -311,3 +313,9 @@
 
 // console.log(checkStr('webacademybrain', 'brainwebacademy')); // true
 // console.log(checkStr('webacademybrain', 'brainwebacadht')); // false
+
+// Optimal way ---
+
+// const checkStr = (str1, str2) => str1.toLowerCase().split('').sort((a, b) => a.localeCompare(b)).join('') === str2.toLowerCase().split('').sort((a, b) => a.localeCompare(b)).join('')
+
+// console.log(checkStr('web', 'bew'));
