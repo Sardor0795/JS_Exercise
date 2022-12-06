@@ -72,3 +72,24 @@
 // };
 
 // Search(obj, "WebBrain");
+
+// No5
+// object va string berilgan.  string bor bolgan object valuelarining chiqaring
+// atirgul,qizil
+
+// let obj = {
+//   id: 1,
+//   name: "atirgul",
+//   color: "qizil",
+//   count: 10,
+//   price: "10$",
+// };
+// const searchValue = (obj) => {
+//   for (i in obj) {
+//     if (typeof obj[i] == "string") {
+//       console.log(obj[i]);
+//     }
+//   }
+// };
+
+// searchValue(obj);
