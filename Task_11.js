@@ -49,3 +49,26 @@
 //     console.log(i);
 //   }
 // }
+
+// No4
+// object va string berilgan .agar object keylari ichida stringga teng bolgan key bolsa shu key va valueni chiqazing
+// chiqish
+//     name:"WebBrain"
+
+// let obj = {
+//   id: 1,
+//   name: "WebBrain",
+//   offline: true,
+//   online: true,
+//   individual: false,
+// };
+
+// const Search = (obj, str) => {
+//   for (i in obj) {
+//     if (obj[i] === str) {
+//       console.log(`${i}: ${obj[i]}`);
+//     }
+//   }
+// };
+
+// Search(obj, "WebBrain");
