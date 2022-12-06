@@ -14,18 +14,6 @@
 
 // console.log(delDuplicate(str));
 
-// ---------
-
-// let str = "webbbraiiin accaddemmy";
-// const removeDuplicate = (str) => {
-//   let res = "";
-//   for (let i = 0; i < str.length; i++) {
-//     if (str[i] !== str[i + 1]) res += str[i];
-//   }
-//   return res;
-// };
-// console.log(removeDuplicate(str));
-
 // Ex 2 ---
 
 // let str = "ikki";
