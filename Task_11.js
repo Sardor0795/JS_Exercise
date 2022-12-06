@@ -93,3 +93,33 @@
 // };
 
 // searchValue(obj);
+
+// No6
+// object ichida objectlar berilgan. ichki objectlarning ichiga age degan key berilgan. barcha ichki keylardagi age lar yigindisini toping
+// chiqish
+// 146
+
+// let person = {
+//   id: 1,
+//   name: "Odil",
+//   age: 78,
+//   child: {
+//     id: 1,
+//     name: "Ali",
+//     age: 48,
+//     child: {
+//       id: 1,
+//       name: "Umar",
+//       age: 20,
+//     },
+//   },
+// };
+
+// let sum = 0;
+
+// while (person) {
+//   sum = sum + person.age;
+//   person = person.child;
+// }
+
+// console.log(sum);
