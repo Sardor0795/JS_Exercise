@@ -1,9 +1,9 @@
 const moment = () => {
   return {
-    format(param) {
+    format(type) {
       let date = new Date();
       let hours = date.getHours();
-      let minutes = date.getSeconds();
+      let minutes = date.getMinutes();
       let clock12 = hours >= 12 ? "PM" : "AM";
       let months = [
         "January",
@@ -29,7 +29,7 @@ const moment = () => {
         "Saturday",
       ];
 
-      switch (param) {
+      switch (type) {
         case "LT":
           return `${hours - 12}:${minutes} ${clock12}`;
           break;
