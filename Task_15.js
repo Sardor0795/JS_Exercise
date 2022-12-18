@@ -29,3 +29,17 @@
 // Object.setProto(obj, "age", { configurable: false });
 
 // console.log(Object.getOwnPropertyDescriptor(obj, "age"));
+
+// --------------
+
+// let obj = {
+//   name: "Sardor",
+//   age: 27,
+//   set(key, prop, type) {
+//     Object.defineProperty(this, key, { [prop]: type });
+//   },
+// };
+
+// obj.set("name", "writable", false);
+
+// console.log(Object.getOwnPropertyDescriptor(obj, "name"));
