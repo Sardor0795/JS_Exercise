@@ -3,8 +3,8 @@ let box = document.querySelector(".box");
 
 function position(e) {
   ball.style.cssText = `
-        top: ${e.clientY - 50}px;
-        left: ${e.clientX - 50}px;
+        top: ${e.offsetY - 50}px;
+        left: ${e.offsetX - 50}px;
     `;
-  console.log(e.clientY, e.clientX);
+  console.log(e.offsetY, e.offsetX);
 }
