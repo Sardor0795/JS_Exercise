@@ -251,17 +251,18 @@ let enterGameDisplay = document.querySelector(".enterGame");
 
 let startDisplay = document.querySelector(".startDisplay");
 
-const slideShow = () => {
-  setInterval(async () => {
-    let randImgNum = 1 + parseInt(Math.random() * 30);
-    startDisplay.style.backgroundImage = `url("./img/slideShowImgs/img-${randImgNum}.jpg")`;
-  }, 1000);
-};
+let intRun = 0;
 
 const enterGame = () => {
   enterGameDisplay.style.display = "none";
   uefaAudio.play();
-  slideShow();
+  if (intRun == 0) {
+    setInterval(() => {
+      let randImgNum = 1 + parseInt(Math.random() * 30);
+      startDisplay.style.backgroundImage = `url("./img/slideShowImgs/img-${randImgNum}.jpg")`;
+    }, 1000);
+    ++intRun;
+  }
 };
 
 const exitGame = () => {
