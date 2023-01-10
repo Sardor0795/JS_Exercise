@@ -3,7 +3,8 @@ let pitch = document.querySelector(".pitch");
 let ball = document.querySelector(".ball");
 const goalKeeper = document.querySelector(".goal-keeper");
 
-let randNum = parseInt(Math.random() * 9);
+let randNumGoal = parseInt(Math.random() * 9);
+let randNumBall = parseInt(Math.random() * 9);
 
 let goalPath = {
   1: { b: 150, l: 180, r: -50 },
@@ -62,26 +63,26 @@ pitch.addEventListener("mouseup", (e) => {
 });
 
 pitch.addEventListener("click", (e) => {
-  if (e.offsetX >= 455 && e.offsetX <= 500) {
-    ball.style.bottom = "105px";
-    ball.style.left = "760px";
-    ball.style.width = "30px";
+  if (
+    e.offsetX >= 455 &&
+    e.offsetX <= 500 &&
+    e.offsetY >= 520 &&
+    e.offsetY <= 570
+  ) {
+    ball.style.cssText = `
+      bottom: ${ballPath[randNumBall + 1].b}px;
+      left: ${ballPath[randNumBall + 1].l}px;
+      width: 30px;
+    `;
 
     goalKeeper.style.cssText = `
-
-      bottom: ${goalPath[randNum + 1].b}px;
-      left: ${goalPath[randNum + 1].l}px;
-      transform: rotate(${goalPath[randNum + 1].r}deg);
+      bottom: ${goalPath[randNumGoal + 1].b}px;
+      left: ${goalPath[randNumGoal + 1].l}px;
+      transform: rotate(${goalPath[randNumGoal + 1].r}deg);
     `;
   }
   console.log("X: " + e.offsetX, "Y: " + e.offsetY);
 });
-
-
-
-//-----
-
-
 
 // x: 455 - 500
 // y 520 - 570
