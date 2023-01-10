@@ -7,18 +7,22 @@ let modal = document.querySelector(".modal");
 let win = document.querySelector(".win");
 let loose = document.querySelector(".loose");
 let scoreDisplay = document.querySelector(".score");
+let constBtn = document.querySelector(".contBtn");
+let pcScore = document.querySelector(".pcScore");
 
 let score = 0;
+let pc = 0;
+let gameCount = 0;
 
 let goalPath = {
   1: { b: 150, l: 180, r: -50 },
   2: { b: 90, l: 180, r: -75 },
   3: { b: 25, l: 180, r: -90 },
   4: { b: 140, l: 398, r: 0 },
-  5: { b: 140, l: 398, r: 0 },
+  5: { b: 95, l: 398, r: 0 },
   6: { b: 10, l: 380, r: 80 },
   7: { b: 150, l: 610, r: 50 },
-  8: { b: 190, l: 610, r: 75 },
+  8: { b: 90, l: 610, r: 75 },
   9: { b: 25, l: 610, r: 90 },
 };
 
@@ -26,7 +30,7 @@ let ballPath = {
   1: { b: 292, l: 207 },
   2: { b: 200, l: 207 },
   3: { b: 105, l: 207 },
-  4: { b: 292, l: 485 },
+  4: { b: 295, l: 485 },
   5: { b: 200, l: 485 },
   6: { b: 105, l: 485 },
   7: { b: 292, l: 760 },
@@ -43,7 +47,6 @@ pitch.addEventListener("mousemove", (e) => {
       display: block;
       top: ${e.offsetY - 35}px;
       left: ${e.offsetX - 35}px;
-      transform: rotate(0);
     `;
 });
 
@@ -67,6 +70,7 @@ pitch.addEventListener("mouseup", (e) => {
 });
 
 pitch.addEventListener("click", (e) => {
+  foot.style.transform.rotate = "0deg";
   let randNumGoal = parseInt(Math.random() * 9);
   let randNumBall = parseInt(Math.random() * 9);
   if (
@@ -87,15 +91,39 @@ pitch.addEventListener("click", (e) => {
       transform: rotate(${goalPath[randNumGoal + 1].r}deg);
     `;
 
-    if (randNumBall !== randNumGoal) {
+    if (randNumBall + 1 !== randNumGoal + 1) {
+      if (randNumGoal + 1 == 4 && randNumBall + 1 == 5) {
+        console.log(`Ball: ${randNumBall + 1}`, `Goal: ${randNumGoal + 1}`);
+        loose.style.display = "block";
+        gameCount += 1;
+        pc += 1;
+        pcScore.innerHTML = pc;
+        pcScore.style.color = "#f12d0b";
+        setTimeout(() => {
+          modal.style.display = "flex";
+          modal.style.oppacity = "1";
+          modal.style.pointerEvents = "all";
+          modal.style.zIndex = "500";
+          constBtn.innerHTML = "Continue Game";
+          foot.style.height = "0";
+          foot.style.width = "0";
+        }, 500);
+        return false;
+      }
       score += 1;
+      gameCount += 1;
       scoreDisplay.innerHTML = score;
       if (score > 0) {
-        scoreDisplay.style.color = "green";
+        scoreDisplay.style.color = "#4cd174";
       }
       win.style.display = "block";
     } else {
+      console.log(`Ball: ${randNumBall + 1}`, `Goal: ${randNumGoal + 1}`);
       loose.style.display = "block";
+      gameCount += 1;
+      pc += 1;
+      pcScore.innerHTML = pc;
+      pcScore.style.color = "#f12d0b";
     }
 
     setTimeout(() => {
@@ -103,14 +131,16 @@ pitch.addEventListener("click", (e) => {
       modal.style.oppacity = "1";
       modal.style.pointerEvents = "all";
       modal.style.zIndex = "500";
-      foot.style.display = "none";
+      constBtn.innerHTML = "Continue Game";
+      foot.style.height = "0";
+      foot.style.width = "0";
     }, 500);
   }
 });
 
 const continueGame = () => {
   ball.style.cssText = `
-  bottom: 15px;
+  bottom: 10px;
   left: calc(50% - 25px);
   `;
 

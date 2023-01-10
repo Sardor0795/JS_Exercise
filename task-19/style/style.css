@@ -59,9 +59,15 @@ body {
   transform: translateX(-50%);
   color: white;
   font-size: 40px;
+  z-index: 501;
 }
 .score {
-  color: rgb(241, 45, 11);
+  color: #f12d0b;
+  z-index: 501;
+}
+
+.pcScore {
+  color: rgb(76, 209, 116);
 }
 
 .modal {
