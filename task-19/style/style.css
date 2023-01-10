@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #222;
+  overflow: hidden;
+}
+
+.pitch {
+  width: 1000px;
+  height: 600px;
+  background-color: rgb(78, 190, 74);
+  background-image: url("../img/goal.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  user-select: none;
+}
+
+.goal-keeper {
+  width: 210px;
+  position: absolute;
+  bottom: 70px;
+  left: calc(50% - 105px);
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.ball {
+  width: 50px;
+  position: absolute;
+  bottom: 15px;
+  left: calc(50% - 25px);
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.foot {
+  position: absolute;
+  background-image: url("../img/foot.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  z-index: 999;
+  width: 70px;
+  height: 70px;
+  pointer-events: none;
+  display: none;
+  transition: transform 0.1s ease-in-out;
+  transform: rotate(0);
+}
