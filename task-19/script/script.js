@@ -171,7 +171,7 @@ pitch.addEventListener("click", (e) => {
           foot.style.height = "0";
           foot.style.width = "0";
         }, 500);
-        if (gameCount <= 5) {
+        if (gameCount >= 5) {
           setTimeout(() => {
             constBtn.style.display = "none";
           }, 501);
@@ -192,11 +192,11 @@ pitch.addEventListener("click", (e) => {
         scoreDisplay.style.color = "#4cd174";
       }
       win.style.display = "block";
-      if (gameCount <= 5 && score > pc) {
+      if (gameCount >= 5 && score > pc) {
         winFunc();
       }
     } else {
-      if (gameCount <= 4 && score < pc) {
+      if (gameCount >= 4 && score < pc) {
         looseFunc();
       }
       setTimeout(() => {
