@@ -20,19 +20,22 @@
     <div class="modal">
       <div class="win">GOOOOOL</div>
       <div class="loose">SAVE!!!</div>
-      <button class="contBtn" onclick="continueGame()">Start Game</button>
+      <div class="modalBtnsWrapper">
+        <button class="contBtn" onclick="continueGame()">Start Game</button>
+        <button class="quitGame" onclick="quitGame()">Quit Game</button>
+      </div>
     </div>
 
     <div class="startDisplay">
       <div class="startDisplayBtnsWrapper">
-        <button onclick="startGame()" class="startGameBtn">Start Game</button>
+        <button onclick="startGame()" class="startGameBtn">Enter Game</button>
         <button onclick="exitGame()" class="exitGameBtn">Exit Game</button>
       </div>
     </div>
 
     <div class="enterGame">
       <!-- <p class="enterGame__title"><span class="EnterGame__name">PES</span> <span class="enterGame__number">23</span></p> -->
-      <button class="enterBtn" onclick="enterGame()">Enter Game</button>
+      <button class="enterBtn" onclick="enterGame()">Open Game</button>
     </div>
 
     <audio id="uefaAudio" src="./audio/uefaSong.mp3"></audio>

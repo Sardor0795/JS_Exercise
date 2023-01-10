@@ -10,6 +10,8 @@ let scoreDisplay = document.querySelector(".score");
 let constBtn = document.querySelector(".contBtn");
 let pcScore = document.querySelector(".pcScore");
 
+let quitGameBtn = document.querySelector(".quitGame");
+
 let score = 0;
 let pc = 0;
 let gameCount = 0;
@@ -138,7 +140,7 @@ pitch.addEventListener("click", (e) => {
       modal.style.oppacity = "1";
       modal.style.pointerEvents = "all";
       modal.style.zIndex = "500";
-      constBtn.innerHTML = "Continue Game";
+      constBtn.innerHTML = "Continue";
       foot.style.height = "0";
       foot.style.width = "0";
     }, 500);
@@ -163,11 +165,7 @@ const continueGame = () => {
 
   win.style.display = "none";
   loose.style.display = "none";
-  if (sss == 0) {
-    uefaAudio.play();
-  }
   goalSound.load();
-  xaxaSound.load();
 };
 
 // x: 455 - 500
@@ -201,4 +199,9 @@ const exitGame = () => {
 const startGame = () => {
   startDisplay.style.display = "none";
   uefaAudio.load();
+};
+
+const quitGame = () => {
+  startDisplay.style.display = "flex";
+  uefaAudio.play();
 };
