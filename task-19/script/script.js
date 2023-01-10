@@ -242,7 +242,6 @@ const slideShow = () => {
   setInterval(async () => {
     let randImgNum = 1 + parseInt(Math.random() * 30);
     startDisplay.style.backgroundImage = `url("./img/slideShowImgs/img-${randImgNum}.jpg")`;
-    console.log(randImgNum);
   }, 1000);
 };
 
