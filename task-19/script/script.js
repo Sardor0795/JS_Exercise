@@ -79,6 +79,7 @@ pitch.addEventListener("click", (e) => {
     e.offsetY >= 520 &&
     e.offsetY <= 570
   ) {
+    ballSound.play();
     ball.style.cssText = `
       bottom: ${ballPath[randNumBall + 1].b}px;
       left: ${ballPath[randNumBall + 1].l}px;
@@ -93,7 +94,9 @@ pitch.addEventListener("click", (e) => {
 
     if (randNumBall + 1 !== randNumGoal + 1) {
       if (randNumGoal + 1 == 4 && randNumBall + 1 == 5) {
-        console.log(`Ball: ${randNumBall + 1}`, `Goal: ${randNumGoal + 1}`);
+        setTimeout(() => {
+          goalSave.play();
+        }, 300);
         loose.style.display = "block";
         gameCount += 1;
         pc += 1;
@@ -110,6 +113,8 @@ pitch.addEventListener("click", (e) => {
         }, 500);
         return false;
       }
+      // stadiumSound.load();
+      goalSound.play();
       score += 1;
       gameCount += 1;
       scoreDisplay.innerHTML = score;
@@ -118,7 +123,9 @@ pitch.addEventListener("click", (e) => {
       }
       win.style.display = "block";
     } else {
-      console.log(`Ball: ${randNumBall + 1}`, `Goal: ${randNumGoal + 1}`);
+      setTimeout(() => {
+        goalSave.play();
+      }, 300);
       loose.style.display = "block";
       gameCount += 1;
       pc += 1;
@@ -139,6 +146,7 @@ pitch.addEventListener("click", (e) => {
 });
 
 const continueGame = () => {
+  // stadiumSound.play();
   ball.style.cssText = `
   bottom: 10px;
   left: calc(50% - 25px);
@@ -155,7 +163,42 @@ const continueGame = () => {
 
   win.style.display = "none";
   loose.style.display = "none";
+  if (sss == 0) {
+    uefaAudio.play();
+  }
+  goalSound.load();
+  xaxaSound.load();
 };
 
 // x: 455 - 500
 // y 520 - 570
+
+// Enter game
+
+let enterGameDisplay = document.querySelector(".enterGame");
+
+let startDisplay = document.querySelector(".startDisplay");
+
+const slideShow = () => {
+  setInterval(async () => {
+    let randImgNum = 1 + parseInt(Math.random() * 30);
+    startDisplay.style.backgroundImage = `url("./img/slideShowImgs/img-${randImgNum}.jpg")`;
+    console.log(randImgNum);
+  }, 1000);
+};
+
+const enterGame = () => {
+  enterGameDisplay.style.display = "none";
+  uefaAudio.play();
+  slideShow();
+};
+
+const exitGame = () => {
+  enterGameDisplay.style.display = "flex";
+  uefaAudio.load();
+};
+
+const startGame = () => {
+  startDisplay.style.display = "none";
+  uefaAudio.load();
+};

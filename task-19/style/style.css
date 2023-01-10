@@ -121,3 +121,111 @@ body {
 .loose {
   background-color: rgb(233, 16, 16);
 }
+
+.startDisplay {
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  background-image: url("../img/slideShowImgs/img-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.startDisplay::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(34, 34, 34, 0.123);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 901;
+}
+
+.startDisplayBtnsWrapper {
+  z-index: 950;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(20, 19, 19, 0.658);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.startGameBtn,
+.exitGameBtn {
+  border: none;
+  background-color: rgba(39, 35, 35, 0.89);
+  color: yellow;
+  font-size: 25px;
+  border-radius: 20px;
+  padding: 20px 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.startGameBtn:active,
+.exitGameBtn:active {
+  transform: translateY(5px);
+}
+
+.startGameBtn {
+  margin-right: 20px;
+}
+
+.startGameBtn:hover,
+.exitGameBtn:hover {
+  background-color: rgb(76, 209, 116);
+  color: #222;
+}
+
+.enterGame {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("../img/uefa__img.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  z-index: 950;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enterGame::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(24, 16, 16, 0.575);
+}
+
+.enterBtn {
+  margin-top: 250px;
+  border: none;
+  background-color: rgb(39, 35, 35);
+  color: yellow;
+  font-size: 25px;
+  border-radius: 20px;
+  padding: 20px 50px;
+  z-index: 960;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.enterBtn:active {
+  transform: translateY(5px);
+}

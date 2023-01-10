@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Soccer</title>
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
@@ -12,7 +12,9 @@
       <img class="goal-keeper" src="img/goalkeeper.png" alt="" />
       <img class="ball" src="img/ball.png" alt="" />
       <div class="foot"></div>
-      <h1 class="score_wrapper">Win: <span class="score">0</span> Loose: <span class="pcScore">0</span></h1>
+      <h1 class="score_wrapper">
+        Win: <span class="score">0</span> Loose: <span class="pcScore">0</span>
+      </h1>
     </div>
 
     <div class="modal">
@@ -20,6 +22,25 @@
       <div class="loose">SAVE!!!</div>
       <button class="contBtn" onclick="continueGame()">Start Game</button>
     </div>
+
+    <div class="startDisplay">
+      <div class="startDisplayBtnsWrapper">
+        <button onclick="startGame()" class="startGameBtn">Start Game</button>
+        <button onclick="exitGame()" class="exitGameBtn">Exit Game</button>
+      </div>
+    </div>
+
+    <div class="enterGame">
+      <!-- <p class="enterGame__title"><span class="EnterGame__name">PES</span> <span class="enterGame__number">23</span></p> -->
+      <button class="enterBtn" onclick="enterGame()">Enter Game</button>
+    </div>
+
+    <audio id="uefaAudio" src="./audio/uefaSong.mp3"></audio>
+    <audio id="goalSound" src="./audio/Goal.mp3"></audio>
+    <audio id="xaxaSound" src="./audio/axax.mp3"></audio>
+    <audio id="ballSound" src="./audio/kickBall.mp3"></audio>
+    <!-- <audio id="stadiumSound" src="./audio/stadium.mp3"></audio> -->
+    <audio id="goalSave" src="./audio/goalSave.mp3"></audio>
 
     <script src="script/script.js"></script>
   </body>
