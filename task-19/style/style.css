@@ -218,7 +218,8 @@ body {
 }
 
 .startGameBtn:hover,
-.exitGameBtn:hover {
+.exitGameBtn:hover,
+.enterBtn:hover {
   background-color: rgb(76, 209, 116);
   color: #222;
 }
