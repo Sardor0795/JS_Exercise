@@ -100,6 +100,9 @@ pitch.addEventListener("click", (e) => {
 
     setTimeout(() => {
       modal.style.display = "flex";
+      modal.style.oppacity = "1";
+      modal.style.pointerEvents = "all";
+      modal.style.zIndex = "500";
       foot.style.display = "none";
     }, 500);
   }
@@ -116,7 +119,10 @@ const continueGame = () => {
   left: calc(50% - 105px);
   `;
 
-  modal.style.display = "none";
+  modal.style.oppacity = "0";
+  modal.style.pointerEvents = "none";
+  modal.style.zIndex = "-1";
+
   win.style.display = "none";
   loose.style.display = "none";
 };
