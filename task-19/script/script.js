@@ -126,8 +126,8 @@ pitch.addEventListener("mouseup", (e) => {
 pitch.addEventListener("click", (e) => {
   foot.style.transform.rotate = "0deg";
 
-  let randNumGoal = parseInt(Math.random() * 8);
-  let randNumBall = parseInt(Math.random() * 8);
+  let randNumGoal = parseInt(Math.random() * 9);
+  let randNumBall = parseInt(Math.random() * 9);
 
   if (
     e.offsetX >= 455 &&
