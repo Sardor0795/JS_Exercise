@@ -67,7 +67,7 @@ body {
 }
 
 .pcScore {
-  color: rgb(76, 209, 116);
+  color: #4cd174;
 }
 
 .modal {
@@ -85,6 +85,12 @@ body {
   transition: oppacity 0.2s ease;
 }
 
+.modalBtnsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .contBtn {
   width: 310px;
   border: none;
@@ -95,10 +101,24 @@ body {
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-right: 20px;
+}
+
+.playAgain {
+  width: 310px;
+  border: none;
+  background-color: rgb(60, 91, 231);
+  color: #fff;
+  font-size: 35px;
+  padding: 10px 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+  margin-right: 20px;
 }
 
 .quitGame {
-  margin-top: 20px;
   width: 310px;
   border: none;
   background-color: rgb(60, 91, 231);
@@ -111,7 +131,8 @@ body {
 }
 
 .contBtn:hover,
-.quitGame:hover {
+.quitGame:hover,
+.playAgain:hover {
   background-color: rgba(33, 70, 236, 0.993);
 }
 

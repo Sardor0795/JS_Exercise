@@ -9,6 +9,7 @@ let loose = document.querySelector(".loose");
 let scoreDisplay = document.querySelector(".score");
 let constBtn = document.querySelector(".contBtn");
 let pcScore = document.querySelector(".pcScore");
+let playGameAgainBtn = document.querySelector(".playAgain");
 
 let quitGameBtn = document.querySelector(".quitGame");
 
@@ -39,6 +40,57 @@ let ballPath = {
   8: { b: 200, l: 760 },
   9: { b: 105, l: 760 },
 };
+
+function winFunc() {
+  win.innerHTML = "You Win";
+  playGameAgainBtn.style.display = "block";
+  constBtn.style.display = "none";
+  gameOver.play();
+}
+
+function looseFunc() {
+  win.style.display = "none";
+  loose.innerHTML = "You Loose";
+  loose.style.display = "block";
+  playGameAgainBtn.style.display = "block";
+  constBtn.style.display = "none";
+  gameOver.play();
+}
+
+function playAgain() {
+  gameOver.load();
+  goalSave.load();
+  goalSound.load();
+  constBtn.innerHTML = "Start Game";
+  constBtn.style.display = "block";
+  playGameAgainBtn.style.display = "none";
+  scoreDisplay.innerHTML = "0";
+  scoreDisplay.style.color = "#f12d0b";
+  pcScore.innerHTML = "0";
+  pcScore.style.color = "#4cd174";
+  win.style.display = "none";
+  loose.style.display = "none";
+  ball.style.cssText = `
+  bottom: 10px;
+  left: calc(50% - 25px);
+  `;
+
+  goalKeeper.style.cssText = `
+  bottom: 70px;
+  left: calc(50% - 105px);
+  `;
+  score = 0;
+  pc = 0;
+  gameCount = 0;
+
+  modal.style.oppacity = "0";
+  modal.style.pointerEvents = "none";
+  modal.style.zIndex = "-1";
+
+  win.style.display = "none";
+  loose.style.display = "none";
+  goalSound.load();
+}
 
 pitch.addEventListener("mousemove", (e) => {
   (pitch.style.cursor = "none"),
@@ -73,8 +125,10 @@ pitch.addEventListener("mouseup", (e) => {
 
 pitch.addEventListener("click", (e) => {
   foot.style.transform.rotate = "0deg";
+
   let randNumGoal = parseInt(Math.random() * 9);
   let randNumBall = parseInt(Math.random() * 9);
+
   if (
     e.offsetX >= 455 &&
     e.offsetX <= 500 &&
@@ -82,6 +136,7 @@ pitch.addEventListener("click", (e) => {
     e.offsetY <= 570
   ) {
     ballSound.play();
+
     ball.style.cssText = `
       bottom: ${ballPath[randNumBall + 1].b}px;
       left: ${ballPath[randNumBall + 1].l}px;
@@ -109,7 +164,7 @@ pitch.addEventListener("click", (e) => {
           modal.style.oppacity = "1";
           modal.style.pointerEvents = "all";
           modal.style.zIndex = "500";
-          constBtn.innerHTML = "Continue Game";
+          constBtn.innerHTML = "Continue";
           foot.style.height = "0";
           foot.style.width = "0";
         }, 500);
@@ -124,7 +179,13 @@ pitch.addEventListener("click", (e) => {
         scoreDisplay.style.color = "#4cd174";
       }
       win.style.display = "block";
+      if (gameCount == 5 && score > pc) {
+        winFunc();
+      }
     } else {
+      if (gameCount == 4 && score < pc) {
+        looseFunc();
+      }
       setTimeout(() => {
         goalSave.play();
       }, 300);
@@ -204,4 +265,26 @@ const startGame = () => {
 const quitGame = () => {
   startDisplay.style.display = "flex";
   uefaAudio.play();
+  gameOver.load();
+  goalSave.load();
+  goalSound.load();
+  constBtn.innerHTML = "Start Game";
+  scoreDisplay.innerHTML = "0";
+  scoreDisplay.style.color = "#f12d0b";
+  pcScore.innerHTML = "0";
+  pcScore.style.color = "#4cd174";
+  win.style.display = "none";
+  loose.style.display = "none";
+  ball.style.cssText = `
+  bottom: 10px;
+  left: calc(50% - 25px);
+  `;
+
+  goalKeeper.style.cssText = `
+  bottom: 70px;
+  left: calc(50% - 105px);
+  `;
+  score = 0;
+  pc = 0;
+  gameCount = 0;
 };
