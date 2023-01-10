@@ -42,11 +42,51 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  z-index: 999;
+  z-index: 100;
   width: 70px;
   height: 70px;
   pointer-events: none;
   display: none;
   transition: transform 0.1s ease-in-out;
   transform: rotate(0);
+}
+
+.score_wrapper {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 40px;
+}
+.score {
+  color: rgb(241, 45, 11);
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(15, 14, 14);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}
+
+.contBtn {
+  border: none;
+  background-color: rgb(76, 209, 116);
+  color: #fff;
+  font-size: 40px;
+  padding: 20px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.contBtn:active {
+  transform: translateY(2px);
 }

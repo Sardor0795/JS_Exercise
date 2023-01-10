@@ -3,8 +3,9 @@ let pitch = document.querySelector(".pitch");
 let ball = document.querySelector(".ball");
 const goalKeeper = document.querySelector(".goal-keeper");
 
-let randNumGoal = parseInt(Math.random() * 9);
-let randNumBall = parseInt(Math.random() * 9);
+let scoreDisplay = document.querySelector(".score");
+
+let score = 0;
 
 let goalPath = {
   1: { b: 150, l: 180, r: -50 },
@@ -63,6 +64,8 @@ pitch.addEventListener("mouseup", (e) => {
 });
 
 pitch.addEventListener("click", (e) => {
+  let randNumGoal = parseInt(Math.random() * 9);
+  let randNumBall = parseInt(Math.random() * 9);
   if (
     e.offsetX >= 455 &&
     e.offsetX <= 500 &&
@@ -80,9 +83,30 @@ pitch.addEventListener("click", (e) => {
       left: ${goalPath[randNumGoal + 1].l}px;
       transform: rotate(${goalPath[randNumGoal + 1].r}deg);
     `;
+
+    if (randNumBall !== randNumGoal) {
+      score += 1;
+      scoreDisplay.innerHTML = score;
+      if (score > 0) {
+        scoreDisplay.style.color = "green";
+      }
+    }
   }
-  console.log("X: " + e.offsetX, "Y: " + e.offsetY);
 });
+
+const continueGame = () => {
+  ball.style.cssText = `
+  bottom: 15px;
+  left: calc(50% - 25px);
+  `;
+
+  goalKeeper.style.cssText = `
+  bottom: 70px;
+  left: calc(50% - 105px);
+  `;
+
+  
+};
 
 // x: 455 - 500
 // y 520 - 570
