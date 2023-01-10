@@ -126,8 +126,8 @@ pitch.addEventListener("mouseup", (e) => {
 pitch.addEventListener("click", (e) => {
   foot.style.transform.rotate = "0deg";
 
-  let randNumGoal = parseInt(Math.random() * 9);
-  let randNumBall = parseInt(Math.random() * 9);
+  let randNumGoal = parseInt(Math.random() * 8);
+  let randNumBall = parseInt(Math.random() * 8);
 
   if (
     e.offsetX >= 455 &&
@@ -154,6 +154,7 @@ pitch.addEventListener("click", (e) => {
         setTimeout(() => {
           goalSave.play();
         }, 300);
+        win.style.display = "none";
         loose.style.display = "block";
         gameCount += 1;
         pc += 1;
@@ -165,9 +166,21 @@ pitch.addEventListener("click", (e) => {
           modal.style.pointerEvents = "all";
           modal.style.zIndex = "500";
           constBtn.innerHTML = "Continue";
+          constBtn.style.display = "block";
+          quitGameBtn.style.display = "block";
           foot.style.height = "0";
           foot.style.width = "0";
         }, 500);
+        if (gameCount <= 5) {
+          setTimeout(() => {
+            constBtn.style.display = "none";
+          }, 501);
+          if (score > pc) {
+            winFunc();
+          } else {
+            looseFunc();
+          }
+        }
         return false;
       }
       // stadiumSound.load();
@@ -179,11 +192,11 @@ pitch.addEventListener("click", (e) => {
         scoreDisplay.style.color = "#4cd174";
       }
       win.style.display = "block";
-      if (gameCount == 5 && score > pc) {
+      if (gameCount <= 5 && score > pc) {
         winFunc();
       }
     } else {
-      if (gameCount == 4 && score < pc) {
+      if (gameCount <= 4 && score < pc) {
         looseFunc();
       }
       setTimeout(() => {
@@ -262,6 +275,8 @@ const startGame = () => {
 };
 
 const quitGame = () => {
+  playGameAgainBtn.style.display = "none";
+  constBtn.style.display = "block";
   startDisplay.style.display = "flex";
   uefaAudio.play();
   gameOver.load();
