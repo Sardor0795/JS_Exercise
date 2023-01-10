@@ -3,6 +3,9 @@ let pitch = document.querySelector(".pitch");
 let ball = document.querySelector(".ball");
 const goalKeeper = document.querySelector(".goal-keeper");
 
+let modal = document.querySelector(".modal");
+let win = document.querySelector(".win");
+let loose = document.querySelector(".loose");
 let scoreDisplay = document.querySelector(".score");
 
 let score = 0;
@@ -90,7 +93,15 @@ pitch.addEventListener("click", (e) => {
       if (score > 0) {
         scoreDisplay.style.color = "green";
       }
+      win.style.display = "block";
+    } else {
+      loose.style.display = "block";
     }
+
+    setTimeout(() => {
+      modal.style.display = "flex";
+      foot.style.display = "none";
+    }, 500);
   }
 });
 
@@ -105,7 +116,9 @@ const continueGame = () => {
   left: calc(50% - 105px);
   `;
 
-  
+  modal.style.display = "none";
+  win.style.display = "none";
+  loose.style.display = "none";
 };
 
 // x: 455 - 500
