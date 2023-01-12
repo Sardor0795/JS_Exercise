@@ -11,6 +11,7 @@ let scoreDisplay = document.querySelector(".score");
 let constBtn = document.querySelector(".contBtn");
 let pcScore = document.querySelector(".pcScore");
 let playGameAgainBtn = document.querySelector(".playAgain");
+let ballPlaceCower = document.querySelector(".ballPlaceCower");
 
 let quitGameBtn = document.querySelector(".quitGame");
 
@@ -68,6 +69,7 @@ function looseFunc() {
 }
 
 function playAgain() {
+  ballPlaceCower.style.display = "none";
   gameOver.load();
   goalSave.load();
   goalSound.load();
@@ -138,6 +140,7 @@ pitch.addEventListener("mouseup", (e) => {
 
 pitch.addEventListener("click", (e) => {
   foot.style.transform.rotate = "0deg";
+  ballPlaceCower.style.display = "block";
 
   let randNumGoal = parseInt(Math.random() * 9);
   let randNumBall = parseInt(Math.random() * 9);
@@ -304,6 +307,7 @@ pitch.addEventListener("click", (e) => {
 
 const continueGame = () => {
   modalBtnsWrapper.style.marginTop = "0";
+  ballPlaceCower.style.display = "none";
   stadiumSound.play();
   ball.style.cssText = `
   bottom: 10px;
@@ -356,6 +360,7 @@ const startGame = () => {
 
 const quitGame = () => {
   playGameAgainBtn.style.display = "none";
+  ballPlaceCower.style.display = "none";
   constBtn.style.display = "block";
   startDisplay.style.display = "flex";
   uefaAudio.play();
