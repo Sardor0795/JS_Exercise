@@ -188,6 +188,7 @@ pitch.addEventListener("click", (e) => {
       }
 
       setTimeout(() => {
+        ballPlaceCower.style.display = "none";
         modal.style.display = "flex";
         modal.style.oppacity = "1";
         modal.style.pointerEvents = "all";
@@ -245,6 +246,7 @@ pitch.addEventListener("click", (e) => {
         pcScore.innerHTML = pc;
         pcScore.style.color = "#f12d0b";
         setTimeout(() => {
+          ballPlaceCower.style.display = "none";
           modal.style.display = "flex";
           modal.style.oppacity = "1";
           modal.style.pointerEvents = "all";
@@ -294,6 +296,7 @@ pitch.addEventListener("click", (e) => {
     }
 
     setTimeout(() => {
+      ballPlaceCower.style.display = "none";
       modal.style.display = "flex";
       modal.style.oppacity = "1";
       modal.style.pointerEvents = "all";
@@ -306,8 +309,8 @@ pitch.addEventListener("click", (e) => {
 });
 
 const continueGame = () => {
-  modalBtnsWrapper.style.marginTop = "0";
   ballPlaceCower.style.display = "none";
+  modalBtnsWrapper.style.marginTop = "0";
   stadiumSound.play();
   ball.style.cssText = `
   bottom: 10px;
@@ -353,14 +356,15 @@ const exitGame = () => {
 };
 
 const startGame = () => {
+  ballPlaceCower.style.display = "none";
   startDisplay.style.display = "none";
   uefaAudio.load();
   modalBtnsWrapper.style.marginTop = "300px";
 };
 
 const quitGame = () => {
-  playGameAgainBtn.style.display = "none";
   ballPlaceCower.style.display = "none";
+  playGameAgainBtn.style.display = "none";
   constBtn.style.display = "block";
   startDisplay.style.display = "flex";
   uefaAudio.play();
