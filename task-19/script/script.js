@@ -140,7 +140,6 @@ pitch.addEventListener("mouseup", (e) => {
 
 pitch.addEventListener("click", (e) => {
   foot.style.transform.rotate = "0deg";
-  ballPlaceCower.style.display = "block";
 
   let randNumGoal = parseInt(Math.random() * 9);
   let randNumBall = parseInt(Math.random() * 9);
@@ -151,6 +150,7 @@ pitch.addEventListener("click", (e) => {
     e.offsetY >= 520 &&
     e.offsetY <= 570
   ) {
+    ballPlaceCower.style.display = "block";
     if (e.offsetY > 562) {
       stadiumSound.load();
       ballSound.play();
