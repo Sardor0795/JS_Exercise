@@ -310,8 +310,8 @@ pitch.addEventListener("click", (e) => {
         foot.style.width = "0";
       }, 500);
     }
+    antiDdosAttac = false;
   }
-  antiDdosAttac = false;
 });
 
 const continueGame = () => {
