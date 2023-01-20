@@ -10,7 +10,9 @@ window.onblur = function () {
 
 window.onkeyup = function (e) {
   if (e.keyCode == 44) {
-    // alert("Dont try to take a screen shot");
     text.innerHTML = "";
+    setTimeout(() => {
+      alert("Dont try to take a screen shot!!!");
+    }, 500);
   }
 };
