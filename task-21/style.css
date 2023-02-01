@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 40px 0;
+  background-color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+form {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+form .caption {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  color: #0d263b;
+}
+
+form .form-group {
+  margin-top: 32px;
+  padding: 24px 30px;
+  background: #fff;
+  border: 1px solid #e6e9ec;
+  box-shadow: 0px 10px 30px rgba(13, 38, 59, 0.05);
+  border-radius: 3px;
+}
+
+form .form-group .form-group-title {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #0d263b;
+}
+
+form .form-group .row {
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .form-group .row .col-4 {
+  width: calc(100% / 3 - 40px / 3);
+}
+
+form .form-group .row .col-6 {
+  width: calc(50% - 10px);
+}
+
+form .form-group .row .col-12 {
+  width: 100%;
+}
+
+form .form-group input,
+select {
+  border: none;
+  padding: 4px 0;
+  border-bottom: 1px solid #e6e9ec;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0d263b;
+  outline: none;
+}
+
+select,
+select option {
+  color: #696969 !important;
+}
+
+form .form-group .checkbox-group {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+form .form-group .checkbox-group input[type="checkbox"]:checked {
+  filter: invert(14%) sepia(96%) saturate(4246%) hue-rotate(238deg)
+    brightness(78%) contrast(136%);
+}
+
+form .form-group .checkbox-group input[type="checkbox"]:checked::before {
+  color: #fff;
+}
+
+form .form-group .checkbox-group label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #696969;
+}
+
+form .row-button {
+  margin: 32px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+form .row-button button {
+  width: 280px;
+  padding: 12px 20px;
+  height: 44px;
+  background: #0061df;
+  border-radius: 2px;
+  border: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 0px;
+  right: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  transform: translateY(-200px);
+  transition: transform 0.3s ease;
+}
+
+.modal_success {
+  background-color: rgb(41, 195, 85);
+}
+.modal_error {
+  background-color: rgb(239, 17, 17);
+}
+
+.show {
+  transform: translateY(100px);
+}

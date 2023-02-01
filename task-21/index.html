@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Homework</title>
+</head>
+
+<body>
+
+    <form name="form" id="form">
+        <caption>
+            <h1 class="caption">Add new property</h1>
+        </caption>
+
+        <div class="form-group">
+            <div class="form-group-title">Contact information</div>
+            <div class="row">
+                <input name="address" class="col-6" type="text" placeholder="Address*" required>
+                <input name="city" class="col-6" type="text" placeholder="City">
+            </div>
+            <div class="row">
+                <input name="aditional" class="col-6" type="text" placeholder="Aditional*" required>
+                <input name="home_img" class="col-6" type="text" placeholder="Img path" >
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group-title">Additional</div>
+            <div class="row">
+                <input class="col-4" placeholder="Property ID" type="text">
+                <select class="col-4">
+                    <option value="parent_property">Parent property</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+                <select class="col-4">
+                    <option value="status">Status</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="row">
+                <input class="col-4" placeholder="Label" type="text">
+                <input class="col-4" placeholder="Material" type="text">
+                <input class="col-4" placeholder="Rooms" type="text" required>
+            </div>
+            <div class="row">
+                <input class="col-4" placeholder="Beds" type="text">
+                <input class="col-4" placeholder="Baths" type="text">
+                <input class="col-4" placeholder="Garages" type="text">
+            </div>
+            <div class="row">
+                <input class="col-4" placeholder="Year bulid" type="text">
+                <input class="col-4" placeholder="Home area (sqft)" type="text">
+                <input class="col-4" placeholder="Lot dimensions" type="text">
+            </div>
+            <div class="row">
+                <input class="col-4" placeholder="Lot area (sqft)" type="text">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group-title">Price</div>
+            <div class="row">
+                <input class="col-6" placeholder="Price ($)" type="text">
+                <input class="col-6" placeholder="Price Prefix" type="text">
+            </div>
+            <div class="row">
+                <input class="col-6" placeholder="Price Suffix" type="text">
+                <input class="col-6" placeholder="Price Custom" type="text">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group-title">Media</div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="form-group-title">Amenities</div>
+            <div class="row">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="air" /><label for="air" />Air conditioning</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="lawn" /><label for="lawn" />Lawn</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="dining" /><label for="dining" />Dining Room</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="waterfront" /><label for="waterfront" />Waterfront</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="barbeque" /><label for="barbeque" />Barbeque</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="microwave" /><label for="microwave" />Microwave</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="fireplace" /><label for="fireplace" />Fireplace</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="parking" /><label for="parking" />Parking</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="dryer" /><label for="dryer" />Dryer</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="outdoorShower" /><label for="outdoorShower" />Outdoor Shower</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="petsAllowed" /><label for="petsAllowed" />Pets Allowed</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="doorman" /><label for="doorman" />Doorman</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="gym" /><label for="gym" />Gym</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="refrigerator" /><label for="refrigerator" />Refrigerator</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="washerDryer" /><label for="washerDryer" />Unit Washer/Dryer</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="centralHeating" /><label for="centralHeating" />Central Heating</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="laundry" /><label for="laundry" />Laundry</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="stunningViews" /><label for="stunningViews" />Stunning views</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="onsiteParking" /><label for="onsiteParking" />Onsite Parking</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="cleaningService" /><label for="cleaningService" />Cleaning Service</label>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="form-group-title">Select Energy Class</div>
+            <div class="row">
+                <input class="col-6" placeholder="Energy class" type="text">
+                <input class="col-6" placeholder="Energy Index in kWh/m2a" type="text">
+            </div>
+        </div>
+
+        <div type="submit" class="row-button">
+            <button>Submit</button>
+        </div>
+
+    </form>
+
+    <div class="modal modal_success">Success</div>
+    <div class="modal modal_error">Error</div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
