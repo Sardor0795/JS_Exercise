@@ -171,9 +171,28 @@
 
 // let sum = 0;
 
+// 1st way
 // while (person) {
 //   sum += person.age;
 //   person = person.child;
 // }
+
+// 2nd way
+// while (true) {
+//   if (person) sum += person.age;
+//   else break;
+//   person = person.child;
+// }
+
+// 3rd way - recursion
+// const calcAge = (obj) => {
+//   sum += obj.age;
+//   if (obj.child) {
+//     obj = obj.child;
+//     calcAge(obj);
+//   }
+// };
+
+// calcAge(person);
 
 // console.log(sum);
